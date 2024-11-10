@@ -7,17 +7,7 @@
     <link rel="stylesheet" href="./styles/styles.css" />
 </head>
 <body>
-
-    <script>
-        const currentUser = localStorage.getItem("currentUser");
-  
-        if (!currentUser) {
-          window.location.href = "login.html";
-        } else {
-          console.log("Chào mừng, " + JSON.parse(currentUser).username);
-        }
-      </script>
-
+    
     <div class="top-logo">
         <img src="IMAGES/LOGO.png" alt="FPT Shop Logo">
     </div>
@@ -83,5 +73,17 @@
     <footer>
         <p>Phạm Đức Trung</p>
     </footer>
+
+    <script>
+        // Kiểm tra nếu người dùng đã đăng nhập
+        if (!localStorage.getItem('loggedInUser')) {
+            window.location.href = 'login.html'; // Nếu chưa đăng nhập, chuyển đến trang login
+        }
+
+        // Đăng xuất khi người dùng đóng hoặc rời khỏi trang
+        window.addEventListener('beforeunload', () => {
+            localStorage.removeItem('loggedInUser'); // Xóa thông tin đăng nhập khi đóng trang
+        });
+    </script>
 </body>
 </html>

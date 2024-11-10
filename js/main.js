@@ -10,7 +10,8 @@ btnLogin.addEventListener("click", (e) => {
     const user = JSON.parse(localStorage.getItem(inputUsername.value));
     if (user && user.username === inputUsername.value && user.password === inputPassword.value) {
       alert("Đăng Nhập Thành Công");
-      window.location.href = "index.html";
+      localStorage.setItem('loggedInUser', inputUsername.value); // Lưu thông tin đăng nhập
+      window.location.href = "index.html"; // Chuyển hướng về trang chủ
     } else {
       alert("Đăng Nhập Thất Bại hoặc tài khoản không tồn tại");
     }
