@@ -8,6 +8,16 @@
 </head>
 <body>
 
+    <script>
+        const currentUser = localStorage.getItem("currentUser");
+  
+        if (!currentUser) {
+          window.location.href = "login.html";
+        } else {
+          console.log("Chào mừng, " + JSON.parse(currentUser).username);
+        }
+      </script>
+
     <div class="top-logo">
         <img src="IMAGES/LOGO.png" alt="FPT Shop Logo">
     </div>
