@@ -1,0 +1,364 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 7%;
+}
+
+.top-logo {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.top-logo img {
+    height: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #272f54;
+    padding: 5px 25px;
+    margin-bottom: 7px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 0px;
+    margin: 0px 23px;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+header nav a:hover::after {
+    opacity: 1;
+}
+
+
+header .search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+header .search-bar input {
+    width: 225px;
+    height: 25px;
+}
+
+.search-button {
+    background-color: #db2704; 
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 100px; 
+    height: 25px;
+    font-size: 14px;
+    border: 1px solid #cbcdca;
+}
+
+.search-button:hover {
+    background-color: #1f2525;
+}
+
+.banner {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.banner img {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.promo-section h2 {
+    color: #ed3638;
+    font-size: 30px;
+}
+
+.promo-section {
+    padding: 20px 5%;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #cdcdcd;
+    margin-bottom: 15px;
+}
+
+.promo-section .promo-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.promo-item {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.promo-item img {
+    width: 300px;
+    height: auto;
+}
+
+.promo-item button {
+    background-color: #2a3030;
+    color: white;
+    border: none;
+    padding: 8px 50px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.promo-item button:hover {
+    background-color: #1f2525;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 15px;
+    margin-left:17px; 
+    margin-right:17px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 70px;
+    padding-right: 70px;
+    border: 1px solid #cdcdcd;
+}
+
+.product-list .product-items {
+    display: flex;
+    justify-content: center;
+}
+
+.product-item p {
+    margin: 0;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.product-item img {
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+}
+
+.product-item .price {
+    color: #c1060d;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+footer {
+    text-align: center;
+    padding: 5px 30px;
+    background-color: #272f54;
+    color: white;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+img {
+    transition: border  0.3s ease;
+}
+img:hover {
+    border: 1px dotted #000000;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5f5f5;
+}
+.login__container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.login__container h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+.login__container form {
+  display: flex;
+  flex-direction: column;
+}
+.login__container form label {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.login__container form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.login__container form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.login__container form button:hover {
+  background: #555;
+}
+.login__container form a {
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #333;
+}
+.login__container form a:hover {
+  color: #555;
+}
+.login__registerButton {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: block;
+}
+
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5f5f5;
+}
+.signup__container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.signup__container h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+.signup__container form {
+  display: flex;
+  flex-direction: column;
+}
+.signup__container form label {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.signup__container form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.signup__container form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.signup__container form button:hover {
+  background: #555;
+}
+.signup__container form a {
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #333;
+}
+.signup__container form a:hover {
+  color: #555;
+}
+.signup__registerButton {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: block;
+}
+  
+@media (max-width: 768px) {
+    body {
+        margin: 0 5%;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .promo-items, .product-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        width: 80%;
+        max-width: none;
+    }
+}
